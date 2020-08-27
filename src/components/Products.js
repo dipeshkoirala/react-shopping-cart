@@ -1,11 +1,12 @@
 import React from 'react';
-
+import {ReactShopping} from '../App'
 // Components
 import Product from './Product';
 
 const Products = props => {
 	return (
 		<div className="products-container">
+		
 			{props.products.map(product => (
 				<Product
 					key={product.id}

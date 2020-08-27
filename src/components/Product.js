@@ -2,7 +2,7 @@ import React from 'react';
 
 const Product = props => {
 	return (
-		<div className="product">
+		<div className="product bg-success">
 			<img src={props.product.image} alt={`${props.product.title} book`} />
 
 			<h1 className="title">{props.product.title}</h1>
