@@ -29,6 +29,9 @@ function App() {
 	setCart([...cart, item])
 	console.log(cart)
 	};
+	const removeItem = (itemId) => {
+		cart.filter((item) => !item.id === item.itemId);
+	  };
 
 	return (
 		<div className="App bg-danger">
@@ -46,7 +49,7 @@ function App() {
 					{/* </ReactShopping.Provider> */}
 
 					<Route path="/cart">
-						<ShoppingCart cart={cart}  />
+						<ShoppingCart cart={cart} removeItem={removeItem} />
 					</Route>
 			</ReactShopping.Provider>
 		</div>
