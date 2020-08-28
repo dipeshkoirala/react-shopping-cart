@@ -43,11 +43,12 @@ function App() {
 					<Route exact path="/">
 						<Products products={products} addItem={addItem} />
 					</Route>
-					</ReactShopping.Provider>
+					{/* </ReactShopping.Provider> */}
+
 					<Route path="/cart">
 						<ShoppingCart cart={cart}  />
 					</Route>
-			{/* </ReactShopping.Provider> */}
+			</ReactShopping.Provider>
 		</div>
 	);
 }

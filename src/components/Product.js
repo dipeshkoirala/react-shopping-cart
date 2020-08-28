@@ -1,18 +1,29 @@
-import React from 'react';
 
-const Product = props => {
+import React,{useContext}from 'react';
+import {ReactShopping} from '../App'
+
+const Product = ({addItem,key,product} ) => {
+// const product=useContext(ReactShopping)
+
+	console.log("this is my props from ",product)
 	return (
+		
+
 		<div className="product bg-success">
-			<img src={props.product.image} alt={`${props.product.title} book`} />
+			{/* {productt.map((product)=>( */}
+				{/* <div key={product.id}> */}
+			<img src={product.image} alt={`${product.title} book`} />
 
-			<h1 className="title">{props.product.title}</h1>
+			<h1 className="title">{product.title}</h1>
 
-			<p className="price">${props.product.price}</p>
+			<p className="price">${product.price}</p>
 
-			<button onClick={() => props.addItem(props.product)}>
+			<button onClick={() => addItem(product)}>
 				Add to cart
 			</button>
-		</div>
+			</div>
+			
+
 	);
 };
 
